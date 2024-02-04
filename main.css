@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;700&display=swap');
+body{
+    background-color: rgb(237, 237, 237);
+    margin:0;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 100;
+}
+.toggle{
+    position:absolute;
+    top:45px;
+    left:350px;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.sideBar{
+    background-color: white;
+    width: 340px;
+    border-radius: 0 20px 20px 0;
+    height: 90vh;
+}
+.logo{
+    width: 50px;
+}
+.searchDiv i{
+    position: absolute;
+    margin:20px 10px
+}
+.searchBox{
+    width: 65%;
+    margin:0 30px
+}
+
+.inputDiv{
+    width: 100%;
+
+}
+.searchInput{
+    width: 100%;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border:1px solid rgb(212, 212, 212)
+}
+.logo{
+    grid-area: logo;
+}
+.logoName{
+    grid-area: logoName;
+    font-size: 20px;
+    font-weight: 300;
+}
+.setting{
+    grid-area: setting;
+    justify-self: end;
+}
+.brand{
+    display: grid;
+    grid-template: 
+    "logo logoName setting" 100%
+    /20% 60% 20%
+    ;
+    align-items: center;
+    justify-items: start;
+    margin:30px
+}
+
+.top{
+    display: grid;
+    margin-bottom: 40px;
+}
+.item1{
+    grid-area: mItems1;
+}.item2{
+    grid-area: mItems2;
+}.item3{
+    grid-area: mItems3;
+}.item4{
+    grid-area: mItems4;
+}.item5{
+    grid-area: mItems5;
+    background-color: #da6c28;
+    border-radius: 10px;
+}
+.item5 .mLink{
+    color:white;
+}
+.item6{
+    grid-area: mItems6;
+    background-color: #d52388;
+    border-radius: 10px;
+    color:white
+}
+.item6 .mLink{
+    color:white;
+}
+.middle{
+    margin:0 30px 0 30px;
+    font-size: 25px;
+    height: 70vh;
+    display: grid;
+    grid-template: 
+    "mItems1"10%
+    "mItems2"10%
+    "mItems3"10%
+    "mItems4"10%
+    " . "auto
+    "mItems5"10%
+    "mItems6"10%
+    /100%
+    ;
+}
+@media only screen and (max-height:1030px) {
+    .middle{
+        display: block;
+    }
+    .item5 , .item6{
+        display: none;
+    }
+}
+.mLink{
+    padding:10px 110px 10px 0;
+
+}
+.bottom{
+    margin:0 30px 0 30px;
+    font-size: 25px;
+    opacity: 60%;
+}
+.mItems{
+    padding: 15px 0 15px 10px;
+    margin-bottom: 15px;
+    opacity: 80%;
+}
+.mItems:hover{
+    background-color: #DEF1FF;
+    border-radius: 10px;
+
+}
+.mItems:hover .mIcon , .mItems:hover .mText{
+    color:#0e7ac7;
+
+}
+.mText{
+    padding-left:5px;
+}
+
+.displayChanger{
+    display: none;
+}
+.sideBarToggle{
+    width: 110px;
+}
+.toggleButtonToggled{
+    left: 120px;
+}

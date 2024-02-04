@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <i id="toggle" class="fa-solid fa-circle-chevron-right fa-flip-horizontal toggle" onclick="toggle()"></i>
+    <script>
+        let toggle =()=>{
+          let element = document.getElementById('toggle')
+          let text = document.getElementsByClassName('mText')
+          element.classList.toggle('toggleButtonToggled')
+          element.classList.toggle('fa-flip-horizontal')
+          for (let i = 0; i < text.length; i++){
+            text[i].classList.toggle('displayChanger')
+            console.log('done')
+          }
+          let logoName = document.getElementById('logoName').classList.toggle('displayChanger')
+          let setting = document.getElementById('setting').classList.toggle('displayChanger')
+          let searchInput = document.getElementById('searchInput').classList.toggle('displayChanger')
+          let sideBar = document.getElementById('sideBar').classList.toggle('sideBarToggle')
+          let searchBox = document.getElementById('searchBox').classList.toggle('displayChanger')
+        }
+    </script>
+
+    <div class="sideBar" id="sideBar">
+      <div class="top">
+        <div class="brand">
+          <img src="./logo2.png" alt="" class="logo"  />
+          <span class="logoName" id="logoName">amiri team</span>
+          <a href="/setting" class="setting" id="setting"
+            ><i class="fa-solid fa-gear"></i
+          ></a>
+        </div>
+
+        <form action="#" class="searchBox" id="searchBox">
+          <div class="searchDiv">
+            <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+            <input
+              class="searchInput"
+              id="searchInput"
+              type="text"
+              placeholder="search [press enter]"
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="middle">
+        <div class="item1 mItems">
+          <a class="mLink" href="#">
+            <i class="fa-solid fa-house mIcon mIcon"></i>
+            <span class="mText">dashboard</span>
+          </a>
+        </div>
+        <div class="item2 mItems">
+          <a class="mLink" href="#">
+            <i class="fa-regular fa-message mIcon"></i>
+            <span class="mText">messages</span>
+          </a>
+        </div>
+        <div class="item3 mItems">
+          <a class="mLink" href="#">
+            <i class="fa-solid fa-bell mIcon"></i>
+            <span class="mText">notification</span>
+          </a>
+        </div>
+        <div class="item4 mItems">
+          <a class="mLink" href="#">
+            <i class="fa-solid fa-chart-line mIcon"></i>
+            <span class="mText">analitics</span>
+          </a>
+        </div>
+        
+        
+        <div class="item5 mItems">
+          <a class="mLink" href="#">
+            <i class="fa-solid fa-ticket mIcon"></i>
+            <span class="mText">ticket</span>
+          </a>
+        </div>
+
+        <div class="item6 mItems">
+          <a class="mLink" href="#">
+            <i class="fa-solid fa-address-card mIcon"></i>
+            <span class="mText">about us</span>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
